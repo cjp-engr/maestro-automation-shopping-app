@@ -61,7 +61,7 @@ Defined in `.env` (auto-loaded by Maestro CLI):
 APP_ID=com.example.TokoMart
 EMAIL=
 PASSWORD=
-API_URL=http://10.0.2.2:5000
+API_URL=http://10.0.2.2:5001
 ```
 
 ## Teardown Pattern

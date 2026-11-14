@@ -1,58 +1,47 @@
 appId: ${APP_ID}
 ---
 
-# --- Credit Card is Selected by Default ---
+# --- Enter Card Number ---
 - scrollUntilVisible:
     element:
-      text: "Credit Card"
-- assertVisible:
-    id: ${output.checkout.paymentMethod.creditCardSelected}
-    label: "Credit Card is selected by default"
-
-- runFlow:
-    when:
-      visible: "+ New Card"
-    commands:
-      - tapOn: "+ New Card"
-
-- scrollUntilVisible:
-    element:
-      text: "Card Number"
+      id: ${output.checkout.creditCard.cardNumberField}
 - tapOn:
-    text: "Card Number"
+    id: ${output.checkout.creditCard.cardNumberField}
+    label: "Tap Card Number field"
 - inputText:
     text: ${CARD_NUMBER}
     label: "Enter card number"
 
+# --- Select expiry month and year ---
 - scrollUntilVisible:
     element:
-      text: "Cardholder Name"
+      id: ${output.checkout.creditCard.expiryMonthYearField}
 - tapOn:
-    text: "Cardholder Name"
+    id: ${output.checkout.creditCard.expiryMonthYearField}
+    label: "Tap Expiry MM/YY field"
 - inputText:
-    text: ${CARDHOLDER_NAME}
-    label: "Enter cardholder name"
+    text: ${EXPIRY_MONTHYEAR}
+    label: "Enter expiry month and year"
 
-# --- Select expiry month ---
-- hideKeyboard
+# --- Enter CVC ---
 - scrollUntilVisible:
     element:
-      id: ${output.checkout.creditCard.expiryMonthField}
+      id: ${output.checkout.creditCard.cvcField}
 - tapOn:
-    id: ${output.checkout.creditCard.expiryMonthField}
-    label: "Tap Expiry Month field"
-- tapOn:
-    id: "${output.checkout.creditCard.expiryItem}${EXPIRY_MONTH}"
-    label: "Select expiry month"
-- tapOn:
-    text: "Done"
+    id: ${output.checkout.creditCard.cvcField}
+    label: "Tap CVC field"
+- inputText:
+    text: ${CVC}
+    label: "Enter CVC"
 
-# --- Select expiry year ---
+# --- Enter Zip Code ---
+- scrollUntilVisible:
+    element:
+      id: ${output.checkout.creditCard.postalCodeField}
 - tapOn:
-    id: ${output.checkout.creditCard.expiryYearField}
-    label: "Tap Expiry Year field"
-- tapOn:
-    id: "${output.checkout.creditCard.expiryItem}${EXPIRY_YEAR}"
-    label: "Select expiry year"
-- tapOn:
-    text: "Done"
+    id: ${output.checkout.creditCard.postalCodeField}
+    label: "Tap Postal Code field"
+- inputText:
+    text: ${POSTAL_CODE}
+    label: "Enter Postal Code"
+

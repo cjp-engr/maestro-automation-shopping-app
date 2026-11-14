@@ -40,7 +40,7 @@ EMAIL=your@email.com
 PASSWORD=yourpassword
 BUYER_EMAIL=buyer@email.com
 BUYER_PASSWORD=buyerpassword
-API_URL=http://10.0.2.2:5000
+API_URL=http://10.0.2.2:5001
 ```
 
 > `API_URL` uses `10.0.2.2` to reach `localhost` from an Android emulator. Use `127.0.0.1` for a real device or iOS simulator.

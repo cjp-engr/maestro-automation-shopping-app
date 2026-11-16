@@ -27,16 +27,11 @@ tags:
     text: "Size: M"
     label: "Verify that the variant is visible"
 
-- runFlow: ../../elements/flows/proceed_to_checkout.yaml
+- tapOn:
+    text: "Checkout"
+    label: "Proceed to Checkout"
 
-# # --- Enter new credit card details ---
-# - runFlow:
-#     file: ../../elements/flows/enter_new_credit_card.yaml
-#     env:
-#       CARD_NUMBER: "4111111111111111"
-#       CARDHOLDER_NAME: "Test Buyer"
-#       EXPIRY_MONTH: "03"
-#       EXPIRY_YEAR: "2028"
+- runFlow: ../../elements/flows/enter_new_address.yaml
 
 # --- Place Order ---
 - tapOn:

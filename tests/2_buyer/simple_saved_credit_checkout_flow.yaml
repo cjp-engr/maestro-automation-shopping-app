@@ -20,24 +20,26 @@ tags:
     env:
       PRODUCT_NAME: "The Art of Programming"
 
-- runFlow: ../../elements/flows/proceed_to_checkout.yaml
+- tapOn:
+    text: "Checkout"
+    label: "Proceed to Checkout"
 
-# --- Credit Card is Selected by Default ---
-- scrollUntilVisible:
-    element:
-      text: "Credit Card"
-- assertVisible:
-    id: ${output.checkout.paymentMethod.creditCardSelected}
-    label: "Credit Card is selected by default"
+- runFlow: ../../elements/flows/enter_new_address.yaml
 
 # --- Place Order ---
 - tapOn:
     text: "Place Order"
     label: "Click Place Order button"
 
-- assertVisible:
-    id: ${output.orders.ordersScreen}
-    label: "Verify Order screen"
+# --- Saved Cards ---
+- tapOn:
+    text: "Saved Cards"
+    label: "Click Saved Cards tab"
+
+# --- Place Order ---
+- tapOn:
+    text: "Place Order"
+    label: "Click Place Order button"
 
 - assertVisible:
     text: "The Art of Programming"

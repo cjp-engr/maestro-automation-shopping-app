@@ -19,7 +19,11 @@ tags:
     env:
       PRODUCT_NAME: "The Art of Programming"
 
-- runFlow: ../../elements/flows/proceed_to_checkout.yaml
+- tapOn:
+    text: "Checkout"
+    label: "Proceed to Checkout"
+
+- runFlow: ../../elements/flows/enter_new_address.yaml
 
 # --- Place Order ---
 - tapOn:

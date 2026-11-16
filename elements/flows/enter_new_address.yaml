@@ -1,9 +1,9 @@
 appId: ${APP_ID}
 ---
 
-- tapOn:
-    text: "Checkout"
-    label: "Proceed to Checkout"
+# - tapOn:
+#     text: "Checkout"
+#     label: "Proceed to Checkout"
 
 # --- Fill Shipping Address ---
 - tapOn: 

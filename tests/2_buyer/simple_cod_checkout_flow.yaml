@@ -20,7 +20,7 @@ tags:
     env:
       PRODUCT_NAME: "The Art of Programming"
 
-- runFlow: ../../elements/flows/proceed_to_checkout.yaml
+- runFlow: ../../elements/flows/enter_new_address.yaml
 
 # --- Select COD ---
 - scrollUntilVisible:

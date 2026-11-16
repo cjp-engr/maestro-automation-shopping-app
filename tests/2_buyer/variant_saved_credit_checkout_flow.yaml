@@ -27,7 +27,11 @@ tags:
     text: "Size: M"
     label: "Verify that the variant is visible"
 
-- runFlow: ../../elements/flows/proceed_to_checkout.yaml
+- tapOn:
+    text: "Checkout"
+    label: "Proceed to Checkout"
+
+- runFlow: ../../elements/flows/enter_new_address.yaml
 
 # --- Place Order ---
 - tapOn:

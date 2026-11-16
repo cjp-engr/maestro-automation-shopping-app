@@ -29,16 +29,34 @@ tags:
 
 - runFlow: ../../elements/flows/proceed_to_checkout.yaml
 
-# --- Enter new credit card details ---
+# # --- Enter new credit card details ---
+# - runFlow:
+#     file: ../../elements/flows/enter_new_credit_card.yaml
+#     env:
+#       CARD_NUMBER: "4111111111111111"
+#       CARDHOLDER_NAME: "Test Buyer"
+#       EXPIRY_MONTH: "03"
+#       EXPIRY_YEAR: "2028"
+
+# --- Place Order ---
+- tapOn:
+    text: "Place Order"
+    label: "Click Place Order button"
+
+# --- Select and enter Credit Card details ---
 - runFlow:
     file: ../../elements/flows/enter_new_credit_card.yaml
     env:
-      CARD_NUMBER: "4111111111111111"
+      CARD_NUMBER: "4242424242424242"
       CARDHOLDER_NAME: "Test Buyer"
-      EXPIRY_MONTH: "03"
-      EXPIRY_YEAR: "2028"
+      EXPIRY_MONTHYEAR: "330"
+      CVC: "123"
+      POSTAL_CODE: "12345"
 
 # --- Place Order ---
+- scrollUntilVisible:
+    element:
+      text: "Place Order"
 - tapOn:
     text: "Place Order"
     label: "Click Place Order button"

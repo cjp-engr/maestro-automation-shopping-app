@@ -26,10 +26,10 @@ tags:
 
 - runFlow: ../../elements/flows/enter_new_address.yaml
 
-# --- Place Order ---
+# --- Continue to Payment ---
 - tapOn:
-    text: "Place Order"
-    label: "Click Place Order button"
+    text: "Continue to Payment"
+    label: "Click Continue to Payment button"
 
 # --- Saved Cards ---
 - tapOn:
@@ -37,6 +37,9 @@ tags:
     label: "Click Saved Cards tab"
 
 # --- Place Order ---
+- scrollUntilVisible:
+    element:
+      text: "Place Order"
 - tapOn:
     text: "Place Order"
     label: "Click Place Order button"

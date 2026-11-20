@@ -33,10 +33,10 @@ tags:
 
 - runFlow: ../../elements/flows/enter_new_address.yaml
 
-# --- Place Order ---
+# --- Continue to Payment ---
 - tapOn:
-    text: "Place Order"
-    label: "Click Place Order button"
+    text: "Continue to Payment"
+    label: "Click Continue to Payment button"
 
 # --- Select and enter Credit Card details ---
 - runFlow:
